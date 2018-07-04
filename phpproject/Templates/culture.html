@@ -1,0 +1,35 @@
+<div class="container">
+        <div class="row" ng-controller="postsCtrl" style="padding: 18px 0;">
+            <div class="col-sm-4" ng-repeat="post in posts.data" ng-if="post.category=='culture'">
+                <div>
+                    <div class="pmd-card pmd-card-default pmd-z-depth" style="border-bottom: 3px solid #0babf5;">
+                        <!-- Card media -->
+                        <div class="pmd-card-media">
+                            <img src="{{post.image}}" style="height: 210px; width: 100%;;" class="img-responsive">
+                        </div>
+                        <!-- Card body -->
+                        <div class="pmd-card-title" style="padding: 27px 18px 9px 18px;">
+                            <h3 class="pmd-card-title-text" style="font-family: 'Archivo Narrow', sans-serif; font-size: 18px; letter-spacing: 1px;">{{post.title}}</h3>
+                        </div>
+    
+                        <!-- Card actions -->
+                        <div class="pmd-card-actions" style="padding: 9px 18px 13px 18px;">
+                            <div class="pull-left">
+                                <button class="btn pmd-btn-flat pmd-ripple-effect btn-primary" type="button">READ ON</button>
+                            </div>
+                            <div class="pull-right">
+                                <span class="text-muted" style="letter-spacing: 1px;">By: {{post.author}}</span> &emsp;
+                                <a class="avatar-list-img avatar-list-img-custom" href="">
+                                    <img src="{{post.avatar}}" class="img-responsive">
+                                </a>
+                            </div>
+                        </div>
+                        <br/>
+                        <br/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
