@@ -10,9 +10,23 @@ myApp.config(function($routeProvider){
         controller : 'createCtrl'
 
     })
-    .when('/post/:id',{
-        templateUrl: 'Templates/view.html',
-        controller : 'viewCtrl'
+    // .when('/post/:id',{
+    //     templateUrl: 'Templates/view.html',
+    //     controller : 'viewCtrl'
+    // })
+    .when('/post/culture',{
+        templateUrl: 'Templates/culture.html',
+        controller : 'postsCtrl'
+
+    })
+    .when('/post/compensation',{
+        templateUrl: 'Templates/compensation.html',
+        controller : 'postsCtrl'
+
+    })
+    .when('/post/career',{
+        templateUrl: 'Templates/career.html',
+        controller : 'postsCtrl'
 
     })
 });
@@ -22,7 +36,6 @@ myApp.controller("postsCtrl", function($scope,$http){
     $http.get("http://localhost/phpproject/webservices/allPosts.php")
     .then(function(response){
         $scope.posts = response;
-        console.log($scope.posts);
     });
 });
 myApp.controller("viewCtrl", function($scope,$http,$routeParams){

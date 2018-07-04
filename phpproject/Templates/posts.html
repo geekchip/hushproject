@@ -1,23 +1,34 @@
+<div class="container">
+	<div class="row" ng-controller="postsCtrl" style="padding: 18px 0;">
+		<div class="col-sm-4" ng-repeat="post in posts.data">
+			<div>
+				<div class="pmd-card pmd-card-default pmd-z-depth" style="border-bottom: 3px solid #0babf5;">
+					<!-- Card media -->
+					<div class="pmd-card-media">
+						<img src="{{post.image}}" style="height: 210px; width: 100%;;" class="img-responsive">
+					</div>
+					<!-- Card body -->
+					<div class="pmd-card-title" style="padding: 27px 18px 9px 18px;">
+						<h3 class="pmd-card-title-text" style="font-family: 'Archivo Narrow', sans-serif; font-size: 18px; letter-spacing: 1px;">{{post.title}}</h3>
+					</div>
 
-    <div class = "row">
-        <div class="col-sm-4" ng-repeat="post in posts.data.info">
-            <div class="card" style="border-bottom: 2px solid rgb(23, 177, 238);">
-                <img class="card-img-top" src="{{post.image_url}}" style="width: 100%; height: 207px; border-bottom: 1px solid #888;" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title" style="font-weight: 300; font-family: 'Archivo Narrow', sans-serif;">{{post.title}}</h5>
-                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                    <div style="margin: 9px;"></div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                                <span style="font-size: 13px; margin-top: 9px;"><a href="#" style="text-transform: uppercase;">Read On</a></span>
-                        </div>
-                        <div class="col-sm-6">
-                                <span style="color: rgb(165, 163, 163); font-weight: 200; font-size: 13px;">By: {{post.author_name}}</span>&emsp;<img src="https://cdn.iconscout.com/public/images/icon/free/png-512/avatar-user-business-man-399587fe24739d5a-512x512.png" style="width: 36px; height: 36px; border-radius: 50px;" alt="">
-                        </div>
-                    </div>
-                    
-                    
-                </div>
-            </div>
-        </div>
+					<!-- Card actions -->
+					<div class="pmd-card-actions" style="padding: 9px 18px 13px 18px;">
+						<div class="pull-left">
+							<button class="btn pmd-btn-flat pmd-ripple-effect btn-primary" type="button">READ ON</button>
+						</div>
+						<div class="pull-right">
+							<span class="text-muted" style="letter-spacing: 1px;">By: {{post.author}}</span> &emsp;
+							<a class="avatar-list-img avatar-list-img-custom" href="">
+								<img src="{{post.avatar}}" class="img-responsive">
+							</a>
+						</div>
+					</div>
+					<br/>
+					<br/>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
+

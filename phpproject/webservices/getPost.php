@@ -2,7 +2,7 @@
 include_once('config.php');
 $id = $_GET['id'];
 if(!empty($id)){
-    $sql = "SELECT * FROM blogs WHERE id = $id";
+    $sql = "SELECT * FROM blogs WHERE   id = $id";
     $query = $con->query($sql);
     if($query->num_rows > 0){
         while($row = $query->fetch_array()){
